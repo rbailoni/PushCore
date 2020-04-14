@@ -16,6 +16,7 @@
 		9A9DBADD244539D30052A6B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A9DBADB244539D30052A6B9 /* Main.storyboard */; };
 		9A9DBADF244539D60052A6B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9DBADE244539D60052A6B9 /* Assets.xcassets */; };
 		9A9DBAE2244539D60052A6B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A9DBAE0244539D60052A6B9 /* LaunchScreen.storyboard */; };
+		9A9DBAE924453CDC0052A6B9 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9DBAE824453CDC0052A6B9 /* NotificationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		9A9DBADE244539D60052A6B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A9DBAE1244539D60052A6B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A9DBAE3244539D60052A6B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A9DBAE824453CDC0052A6B9 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		9A9DBAB72445397B0052A6B9 /* PushCore */ = {
 			isa = PBXGroup;
 			children = (
+				9A9DBAE724453C800052A6B9 /* Service */,
 				9A9DBAB82445397B0052A6B9 /* PushCore.h */,
 				9A9DBAB92445397B0052A6B9 /* Info.plist */,
 			);
@@ -121,6 +124,14 @@
 				9A9DBAE3244539D60052A6B9 /* Info.plist */,
 			);
 			path = PushCoreSample;
+			sourceTree = "<group>";
+		};
+		9A9DBAE724453C800052A6B9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9A9DBAE824453CDC0052A6B9 /* NotificationService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 				TargetAttributes = {
 					9A9DBAB42445397B0052A6B9 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 					9A9DBABD2445397B0052A6B9 = {
 						CreatedOnToolsVersion = 11.4;
@@ -263,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A9DBAE924453CDC0052A6B9 /* NotificationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +450,7 @@
 		9A9DBACA2445397B0052A6B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = VDG6RR99Z3;
@@ -453,6 +467,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.rbailoni.PushCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -461,6 +476,7 @@
 		9A9DBACB2445397B0052A6B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = VDG6RR99Z3;
@@ -485,6 +501,7 @@
 		9A9DBACD2445397B0052A6B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VDG6RR99Z3;
 				INFOPLIST_FILE = PushCoreTests/Info.plist;
@@ -503,6 +520,7 @@
 		9A9DBACE2445397B0052A6B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VDG6RR99Z3;
 				INFOPLIST_FILE = PushCoreTests/Info.plist;
